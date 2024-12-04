@@ -1,0 +1,229 @@
+@font-face{
+    font-family: chacha;
+    src:url(./6479b994523a6279a03d4da7_Siaga-Bold.woff2);
+}
+@font-face{
+    font-family:haha;
+    src:url(./64eda5e581cb8e58ed55dea5_apercu-medium.woff2);
+}
+@font-face{
+    font-family:mama;
+    src: url('mama.woff2');
+}
+@font-face {
+    font-family: mummy;
+    src: url(./LarkenDEMO-Light.otf);
+}
+
+@font-face {
+    font-family: nana;
+    src: url('primer3.woff2');
+}
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg); /* Starting position */
+    }
+    100% {
+      transform: rotate(360deg); /* Full rotation */
+    }
+  }
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(226, 225, 225);
+    overflow-x: hidden;
+}
+.nav{
+    display:flex;
+    align-items: center;
+    justify-content:space-between ;
+    padding:10px 50px;
+    margin: 0; /* Remove any default margins */
+  
+  position: relative; /* Ensure positioning */
+  top: 0; /* Stick it to the top */
+  left: 0; /* Stick it to the left */
+}
+.nav .first{
+    height: 1.5rem;
+}
+.nav .second{
+    height:2rem;
+    animation: rotate 4s linear infinite;
+    margin-left: 100px;
+    
+}
+.nav .part1{
+    display: flex;
+    align-items: center;   
+    gap: 10px;
+}
+.nav .part1 h4{
+  border: 0.5px solid black; 
+  padding: 5px 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: lighter;
+}
+
+.nav .part1 .contact{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.home{
+    display: flex;
+    justify-content: space-between;
+
+}
+h1{
+    font-family:mummy;
+    font-size: 6.1rem;
+   margin-top: 3rem;
+   margin-left: 3.5rem;
+    display: inline-block; /* Allows width adjustment */
+   width: 55%; /* Set a specific width */
+   height: 30%;
+   text-align:left; /* Align text inside */
+  /* border: 1px solid black; Optional: for visibility */
+   line-height: 0.85;
+   font-weight: 500;
+   word-spacing: -4px;
+   
+  letter-spacing: -1px; /* Add space between characters */
+}
+
+.spanner{
+    height:70px;
+    animation: rotate 4s linear infinite;
+    
+}
+.home p{
+    display:flex;
+    font-size:14px;
+    font-family:mama;
+    width: 250px;
+    /* border:solid 2px red; */
+    margin-top: 11rem;
+    margin-right:35px;
+    
+    
+    overflow-wrap: break-word; /* Ensures text wraps when overflowing */
+    white-space: normal;
+}
+.home div button{
+    color:black;
+    background-color: white;
+    padding:4px 20px 8px 5px;
+    
+    margin-top: 20px;
+    border: solid white;
+    border-radius: 9px;
+    width:170px;
+    font-size: 12px;
+}
+.home div button:hover {
+    background-color: black; /* Change background to black */
+    color: white; /* Change text color to white */
+    transform: scale(1.2); /* Slightly increase the size */
+    transition: all ease 1s;
+}
+#arrow{
+    color: rgb(3, 3, 36);
+    font-size: 24px;
+    font-weight: bold;
+}
+.slider{
+    display:flex;  
+}
+.swipe{
+    display:flex;
+    gap:20px;
+    padding:10px;
+    animation: move 20s linear infinite;
+    margin-top: 90px;
+    margin-bottom: 10px;
+}
+.slider img{
+    height:500px;
+    width:320px;
+    object-fit: cover;
+    border-radius: 100px;
+
+}
+.random-text{
+    align-items: center;
+    justify-content: space-between;
+}
+.random-text p{
+    display:flex;
+    font-size:20px;
+    font-family: mama;
+    width: 90%;
+    /* border:solid 2px red; */
+    margin-left:5%;
+    
+}
+.random-text button{
+    color:black;
+    background-color: white;
+    padding:4px 20px 8px 5px;
+    margin-left:50px;
+    margin-top: 5px;
+    
+    border: solid white;
+    border-radius: 9px;
+    width:170px;
+    font-size: 15px;
+}
+.random-text button:hover {
+    background-color: black; /* Change background to black */
+    color: white; /* Change text color to white */
+    transform: scale(1.2); /* Slightly increase the size */
+    transition: all ease 1s;
+}
+.heading2{
+    font-family: 'Courier New', Courier, monospace;
+    display:flex;
+    width:25%;
+    text-align: center;
+    margin-left:32.5%;
+    justify-content: center;
+    margin-bottom:30px;
+}
+.image-div{
+    width:90%;
+    margin-left: 5%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    transition: all ease 1s;
+    background-image: url('https://cdn.prod.website-files.com/648884be5f32a12e5da2392f/65492b562e62e676d4159713_NS_Wayfinding%20_%20NaN-p-1600.jpg');
+}
+.image-div img{
+    height:350px;
+    opacity: 0;
+    transition: all ease 0.5;
+}
+.image-div:hover{
+    border-radius: 150px;
+}
+.image-div:hover img{
+    opacity: 1;
+    transition: all ease 2s;
+}
